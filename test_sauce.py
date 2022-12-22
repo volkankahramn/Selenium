@@ -106,6 +106,6 @@ class TestLogin():
     assert self.driver.find_element(By.CSS_SELECTOR, INVENTORY_ITEMNAME).text == "Sauce Labs Backpack"
     addBtn = self.driver.find_element(By.CSS_SELECTOR, DATA_TEST_ADD)
     addBtn.click()
-    WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, ".shopping_cart_badge")))
-    elements = self.driver.find_elements(By.CSS_SELECTOR, ".shopping_cart_badge")
+    WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, BASKET)))
+    elements = self.driver.find_elements(By.CSS_SELECTOR, BASKET)
     assert len(elements) == 1
