@@ -16,7 +16,7 @@ class TestLogin():
   
   def test_login(self):
     self.driver.get(BASE_DOMAIN_URL)
-    self.driver.set_window_size(1274, 800)
+    self.driver.maximize_window()
     WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR,USERNAME)))
     username = self.driver.find_element(By.CSS_SELECTOR, USERNAME)
     username.send_keys("standard_user")
@@ -31,7 +31,7 @@ class TestLogin():
   #hatalı giriş
   def test_loginfail(self):
     self.driver.get(BASE_DOMAIN_URL)
-    self.driver.set_window_size(1274, 800)
+    self.driver.maximize_window()
     WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, USERNAME)))
     username = self.driver.find_element(By.CSS_SELECTOR, USERNAME)
     username.click()
@@ -51,7 +51,7 @@ class TestLogin():
   def test_inventor_item(self):
         
         self.driver.get(BASE_DOMAIN_URL)
-        self.driver.set_window_size(1274, 800)
+        self.driver.maximize_window()
         WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, USERNAME)))
         username = self.driver.find_element(By.CSS_SELECTOR, USERNAME)
         username.send_keys("standard_user")
@@ -67,7 +67,7 @@ class TestLogin():
 
   def test_remove(self):
     self.driver.get(BASE_DOMAIN_URL)
-    self.driver.set_window_size(1278, 806)
+    self.driver.maximize_window()
     WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, USERNAME)))
     username = self.driver.find_element(By.CSS_SELECTOR, USERNAME)
     username.click()
@@ -88,7 +88,7 @@ class TestLogin():
     
   def test_number(self):
     self.driver.get(BASE_DOMAIN_URL)
-    self.driver.set_window_size(1278, 806)
+    self.driver.maximize_window()
     WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, USERNAME)))
     username = self.driver.find_element(By.CSS_SELECTOR, USERNAME)
     username.click()
